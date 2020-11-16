@@ -6,7 +6,7 @@ end
 
 puts ("Leica System prototype : proto")
 proto = Leica.new('proto')
-whule true
+while true
     print(">")
     input = gets
     input.chomp!
