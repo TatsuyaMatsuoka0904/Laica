@@ -1,3 +1,16 @@
+require "responder"
+
+class Leica
+    def initialize(name)
+        @name = name 
+        @responder = RandomResponder.new("Random")
+    end
+
+    def dialogue(input)
+        return @responder.response(input)
+    end
+
+    def responder_name
         return @responder.name
     end
 
