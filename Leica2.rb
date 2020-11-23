@@ -1,17 +1,21 @@
-require 'Leica'
+require "Leica.res"
 
-def prompt(leica)
-    retrun leica.name + ":" + leica.responder_name + ">"
-end
+class Leica
+    def initialize(name)
+        @name = name 
+        @responder = RandomResponder.new("Random")
+    end
 
-puts ("Leica System prototype : proto")
-proto = Leica.new('proto')
-while true
-    print(">")
-    input = gets
-    input.chomp!
-    break if input == ""
+    def dialogue(input)
+        return @responder.response(input)
+    end
 
-    response = proto.dialogue(input)
-    puts (prompt(proto) + response)
+    def responder_name
+        return @responder.name
+    end
+
+    def name
+        return @name
+    end
+
 end
