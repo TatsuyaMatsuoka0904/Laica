@@ -1,4 +1,4 @@
-require 'Leica2'
+require './LAICA/Leica2'
 
 def prompt(leica)
     retrun leica.name + ":" + leica.responder_name + ">"
