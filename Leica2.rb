@@ -1,4 +1,4 @@
-require "Leica.res"
+require "./LAICA/Leica.res"
 
 class Leica
     def initialize(name)
